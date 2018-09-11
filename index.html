@@ -18,7 +18,27 @@
 
 
 
-
+	<style>
+		.sec_menu {
+			display: none;
+			overflow: hidden;
+			border-bottom: 1px solid #ccc;
+		}
+		.sec_item {
+			width: 25%;
+			height: 1.12rem;
+			float: left;
+		}
+		.sec_link {
+			display: block;
+			width: 100%;
+			height: 1.12rem;
+			font-size: 0.3rem;
+			color: #fff;
+			line-height: 1.12rem;
+			text-align: center;
+		}
+	</style>
 
 	<div class="header">
 		<div class="menu_btn">
@@ -28,7 +48,33 @@
 		</div>
 		<ul class="fir_menu">
 			<li class="fir_item">
-				<a href="" class="fir_link">企业简介</a>
+				<a href="javascript:void(0);" class="fir_link">企业简介</a>
+				<ul class="sec_menu">
+					<li class="sec_item">
+						<a href="" class="sec_link">企业愿景</a>
+					</li>
+					<li class="sec_item">
+						<a href="" class="sec_link">品牌理念</a>
+					</li>
+					<li class="sec_item">
+						<a href="" class="sec_link">企业精神</a>
+					</li>
+					<li class="sec_item">
+						<a href="" class="sec_link">经营理念</a>
+					</li>
+					<li class="sec_item">
+						<a href="" class="sec_link">核心价值观</a>
+					</li>
+					<li class="sec_item">
+						<a href="" class="sec_link">竞争理念</a>
+					</li>
+					<li class="sec_item">
+						<a href="" class="sec_link">组织框架</a>
+					</li>
+					<li class="sec_item">
+						<a href="" class="sec_link">企业风采</a>
+					</li>
+				</ul>
 			</li>
 			<li class="fir_item">
 				<a href="" class="fir_link">员工之家</a>
@@ -58,6 +104,9 @@
 		$('.menu_btn').click(function() {
 			$(this).toggleClass('menu_btn_active');
 			$('.fir_menu').slideToggle()
+		});
+		$('.fir_item').click(function() {
+			$(this).children('.sec_menu').slideToggle(300);
 		});
 	</script>
 
